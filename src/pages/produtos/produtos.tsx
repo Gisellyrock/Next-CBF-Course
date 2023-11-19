@@ -67,8 +67,13 @@ export default function produtosPagina(){
           produto={e.produto}
           valor={e.valor}
           desconto={e.desconto}
-          funcao={caldDesc}
-        />
+          funcao={caldDesc}>
+          <div>  Teste Curso de React Next</div>
+          <div>  CFBCursos </div>
+
+          </Card>
+
+    
       ) : null
     )}
     </div>
