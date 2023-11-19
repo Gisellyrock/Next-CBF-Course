@@ -6,7 +6,9 @@ export default function Topo(){
   <div className="text-3xl">CFB Cursos</div>
    <div className="subtituloTopo">Curso de React</div> 
    </div>
-  <div>Giselly</div>
+  <nav>
+    Giselly
+    </nav>
 </div>
   )
 }
