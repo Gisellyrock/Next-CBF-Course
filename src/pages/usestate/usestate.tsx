@@ -18,11 +18,7 @@ export default function usestate(){
   return(
     <div>
       usestate
-      <DisplayState valor={cont}></DisplayState>
-      <div className='flex gap-5'>
-      <button className="btnPadrao" onClick={adicionar}>add</button>
-      <button className="btnPadrao" onClick={subtrair}>sub</button>
-      </div>
+      <DisplayState valor={cont} fadicionar={adicionar} fsubtrair={subtrair}></DisplayState>
     </div>
   )
 }
