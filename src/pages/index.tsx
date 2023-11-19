@@ -9,35 +9,35 @@ let canal = 'CBFCursos';
 const produtos = [
   // Seu array de produtos aqui
   {
-    produto:'Mouse',
-    valor:49.9,
-    desconto:0,
-    disponível:true
+    produto: 'Mouse',
+    valor: 49.9,
+    desconto: 0,
+    disponível: true,
   },
   {
-    produto:'Teclado',
-    valor:69.9,
-    desconto:0,
-    disponível:true
+    produto: 'Teclado',
+    valor: 69.9,
+    desconto: 0,
+    disponível: true,
   },
   {
-    produto:'Monitor',
-    valor:449.9,
-    desconto:0,
-    disponível:true
+    produto: 'Monitor',
+    valor: 449.9,
+    desconto: 0,
+    disponível: false,
   },
   {
-    produto:'CPU',
-    valor:4992.9,
-    desconto:0,
-    disponível:true
+    produto: 'CPU',
+    valor: 4992.9,
+    desconto: 0,
+    disponível: true,
   },
   {
-    produto:'Caixa de som',
-    valor:49.9,
-    desconto:0,
-    disponível:true
-  }
+    produto: 'Caixa de som',
+    valor: 49.9,
+    desconto: 0,
+    disponível: false,
+  },
 ];
 
 function caldDesc(v: number, d: number) {
@@ -58,15 +58,17 @@ export default function Home() {
         <div style={{ color: '#f00', backgroundColor: '#bbb' }}>React</div>
       </div>
       <div className="flex justify-center gap-3">
-        {produtos.map((e: any) => (
-          <Card
-            key={e.produto} // Adicione uma chave única (neste caso, o nome do produto) para cada item do array
-            produto={e.produto}
-            valor={e.valor}
-            desconto={e.desconto}
-            funcao={caldDesc} // Corrigido para usar a função caldDesc
-          />
-        ))}
+        {produtos.map((e: any) =>
+          e.disponível ? (
+            <Card
+              key={e.produto}
+              produto={e.produto}
+              valor={e.valor}
+              desconto={e.desconto}
+              funcao={caldDesc}
+            />
+          ) : null
+        )}
       </div>
     </div>
   );
@@ -76,7 +78,7 @@ const testecss = {
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  color: '#00f', // Corrigido de '$00f' para '#00f'
+  color: '#00f',
   backgroundColor: '#eee',
   fontSize: '20px',
 };
