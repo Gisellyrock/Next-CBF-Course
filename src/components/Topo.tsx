@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 export default function Topo(){
   return(
   <div className='flex justify-between items-center bg-zinc-300 h-[100px]'>
@@ -7,8 +9,13 @@ export default function Topo(){
    <div className="subtituloTopo">Curso de React</div> 
    </div>
   <nav>
-    Giselly
-    </nav>
+    <Link href="/produtos/produtos">
+      Produtos
+    </Link>
+    <Link href="/teste/teste">
+      Teste
+    </Link>
+  </nav>
 </div>
   )
 }

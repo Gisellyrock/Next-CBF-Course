@@ -1,4 +1,5 @@
 import Card from "@/components/Card";
+import Topo from "@/components/Topo";
 const produtos = [
   // Seu array de produtos aqui
   {
@@ -43,6 +44,8 @@ function caldDesc2(v: number, d: number) {
 
 export default function produtosPagina(){
   return(
+    <div>
+    <Topo/>
     <div className="flex justify-center gap-3">
     {produtos.map((e: any) =>
       e.disponível ? (
@@ -55,6 +58,7 @@ export default function produtosPagina(){
         />
       ) : null
     )}
+    </div>
   </div>
   )
 }
